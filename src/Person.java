@@ -1,10 +1,12 @@
 import java.time.LocalDate;
 
 public class Person {
-	private String name, gender, loanType;
+	private String name, gender;
 	private LocalDate dob;
 	private long amount;
 	private int tenure;
+	private LoanType loanType;
+	
 	public String getName() {
 		return name;
 	}
@@ -17,10 +19,10 @@ public class Person {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public String getLoanType() {
+	public LoanType getLoanType() {
 		return loanType;
 	}
-	public void setLoanType(String loanType) {
+	public void setLoanType(LoanType loanType) {
 		this.loanType = loanType;
 	}
 	public LocalDate getDate() {
@@ -29,7 +31,7 @@ public class Person {
 	public void setDate(LocalDate dob) {
 		this.dob = dob;
 	}
-	public Person(String name, String gender, String loanType, LocalDate date, long amount, int tenure) {
+	public Person(String name, String gender, LoanType loanType, LocalDate date, long amount, int tenure) {
 		super();
 		this.name = name;
 		this.gender = gender;
